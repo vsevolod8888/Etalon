@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+        <data>
+            <variable
+                name="sportpit"
+                type="com.etalon.shashin.database.SportPit" />
+        </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/backgrounwhite"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_height="120dp">
+
+        <TextView
+            android:id="@+id/numberPosition"
+            android:layout_width="0dp"
+            android:text="1"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_margin="15dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+        </TextView>
+        <TextView
+            android:id="@+id/nameItem"
+            android:layout_width="0dp"
+            android:text="Креатин"
+            android:layout_margin="15dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+        </TextView>
+
+        <TextView
+            android:id="@+id/priceOne"
+            android:layout_width="0dp"
+            android:text="1000 грн"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+        </TextView>
+
+        <TextView
+            android:id="@+id/amount"
+            android:layout_width="0dp"
+            android:text="3"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+        </TextView>
+
+        <TextView
+            android:id="@+id/priceAll"
+            android:layout_width="0dp"
+            android:text="3000 грн"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:layout_margin="15dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+        </TextView>
+
+    </LinearLayout>
+</layout>

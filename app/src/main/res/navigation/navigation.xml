@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/AEnterFragment">
+    <fragment
+        android:id="@+id/AEnterFragment"
+        android:name="com.etalon.shashin.screens.AEnterFragment"
+        android:label="AEnterFragment" >
+        <action
+            android:id="@+id/action_AEnterFragment_to_BListFragment"
+            app:destination="@id/BListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/BListFragment"
+        android:name="com.etalon.shashin.screens.BListFragment"
+        android:label="BListFragment" >
+
+        <action
+            android:id="@+id/action_BListFragment_to_CDetail"
+            app:destination="@id/CDetail" >
+            <argument
+                android:name="sportpit"
+                app:argType="com.etalon.shashin.database.SportPit"
+                app:nullable="false" />
+        </action>
+        <action
+            android:id="@+id/action_BListFragment_to_AEnterFragment"
+            app:destination="@id/AEnterFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/CDetail"
+        android:name="com.etalon.shashin.screens.CDetail"
+        android:label="CDetail">
+        <argument
+            android:name="sportpit"
+            app:argType="com.etalon.shashin.database.SportPit"/>
+        <action
+            android:id="@+id/action_CDetail_to_BListFragment"
+            app:destination="@id/BListFragment" />
+    </fragment>
+
+</navigation>
