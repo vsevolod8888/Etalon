@@ -1,6 +1,8 @@
 package com.etalon.shashin
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.ViewGroup
 
@@ -27,7 +29,7 @@ class Adapter(val clickListener: SportpitListener) :
             selectItemPosition(position)
         }
         holder.tpBind(
-            itemSportpit, position
+            itemSportpit, position,holder.itemView.context
         )
     }
 
@@ -42,14 +44,14 @@ class Holder(val binding: HolderBinding) :
 
     @SuppressLint("SetTextI18n")
     fun tpBind(
-        item: SportPit, position: Int
+        item: SportPit, position: Int, context: Context
 
     ) {
         binding.numberPosition.text = (position+1).toString()
         binding.amount.text = item.amount.toString()
         binding.nameItem.text = item.itemName
-        binding.priceOne.text = "${item.priceforone} грн"
-        binding.priceAll.text = "${item.priceforone.times(item.amount).toFloat()} грн"
+        binding.priceOne.text = "${item.priceforone}" + context.getString(R.string.grn)
+        binding.priceAll.text = "${item.priceforone.times(item.amount).toFloat()}" + context.getString(R.string.grn)
         binding.executePendingBindings()
     }
 
@@ -60,10 +62,7 @@ class Holder(val binding: HolderBinding) :
             return Holder(binding)
         }
     }
-
 }
-
-
 class SleepNightDiffCallback : DiffUtil.ItemCallback<SportPit>() {
     override fun areItemsTheSame(
         oldItem: SportPit,

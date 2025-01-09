@@ -13,13 +13,15 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text="Новая позиция"/>
+        android:text="@string/novayapozitsiya"/>
 
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/et"
-        android:hint="Название"
+        android:hint="@string/nazvanie"
+        android:textColorHint="@color/gray"
+        android:textColor="@color/black"
         android:maxLength="30"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
@@ -32,7 +34,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/edittextamounSportpit"
-        android:hint="Количество"
+        android:hint="@string/kolichestvo"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
         android:inputType="numberDecimal"
         android:maxLength="7"
         android:layout_marginTop="10dp"
@@ -45,7 +49,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/et3"
-        android:hint="Цена за ед."
+        android:hint="@string/tsenazayed"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
         android:inputType="numberDecimal"
         android:maxLength="7"
         android:layout_marginTop="10dp"
@@ -57,7 +63,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etzakupka"
-        android:hint="Цена закупочная"
+        android:hint="@string/tsenazakup"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
         android:inputType="numberDecimal"
         android:maxLength="7"
         android:layout_marginTop="10dp"
@@ -69,10 +77,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/etsrokgodnosti"
-        android:hint="Срок годности"
+        android:hint="@string/srokgodnosti"
         android:maxLength="30"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
         android:background="@drawable/edittext"/>
@@ -90,7 +100,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button"
             android:textSize="20sp"
-            android:text="OK"
+            android:text="@string/ok"
             android:textColor="#ffffffff" />
 
         <Button
@@ -100,13 +110,11 @@
             android:layout_marginLeft="10dp"
             android:background="@drawable/button"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Отмена"
+            android:text="@string/otmena"
             android:textSize="20sp"
             android:textColor="#ffffffff" />
 
 
 
     </LinearLayout>
-
-
 </LinearLayout>

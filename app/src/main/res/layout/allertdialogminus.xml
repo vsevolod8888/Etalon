@@ -13,7 +13,7 @@
         android:layout_marginTop="30dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp"
-        android:text="Отнять -"/>
+        android:text="@string/otnyat"/>
 
 
 
@@ -22,10 +22,12 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:id="@+id/edittextamountMinus"
-        android:hint="Количество"
+        android:hint="@string/kolichestvo"
         android:layout_margin="50dp"
         android:inputType="numberDecimal"
         android:maxLength="7"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
         android:layout_marginLeft="10dp"
@@ -47,7 +49,7 @@
             android:layout_height="wrap_content"
             android:background="@drawable/button"
             android:textSize="20sp"
-            android:text="OK"
+            android:text="@string/ok"
             android:textColor="#ffffffff" />
 
         <Button
@@ -57,7 +59,7 @@
             android:layout_marginLeft="10dp"
             android:background="@drawable/button"
             android:gravity="center_vertical|center_horizontal"
-            android:text="Отмена"
+            android:text="@string/otmena"
             android:textSize="20sp"
             android:textColor="#ffffffff" />
 

@@ -52,6 +52,7 @@ class CDetail : Fragment() {
             requireActivity(),
             object : OnBackPressedCallback(true) {
                 override fun handleOnBackPressed() {
+                    findNavController().navigate(R.id.action_CDetail_to_BListFragment)
                 }
             })
 
@@ -67,7 +68,7 @@ class CDetail : Fragment() {
             showUpdates()
 
             val dateText = detailSportpit.date
-            val locale = Locale("ru", "RU")
+
             val simpleDateFormat = SimpleDateFormat("dd MMMM yyyy, HH:mm:ss");
 
             val date: Date = Date(dateText);
@@ -119,7 +120,7 @@ class CDetail : Fragment() {
 
                 showUpdates()
             } else {
-                Toast.makeText(requireContext(), "Нужно заполнить все поля", Toast.LENGTH_LONG)
+                Toast.makeText(requireContext(), resources.getString(R.string.nugnozapolnitvsepola), Toast.LENGTH_LONG)
                     .show()
             }
             dialog.dismiss()
@@ -133,8 +134,7 @@ class CDetail : Fragment() {
         val dialog = Dialog(requireActivity())
         dialog.setContentView(com.etalon.shashin.R.layout.allertdialogplus)
 
-        var etAmount: EditText? =
-            dialog.findViewById<EditText>(com.etalon.shashin.R.id.edittextamounPlus)
+        var etAmount: EditText? = dialog.findViewById<EditText>(com.etalon.shashin.R.id.edittextamounPlus)
         var buttonOk: Button? = dialog.findViewById<Button>(com.etalon.shashin.R.id.btnokPlus)
         var buttonCancel: Button? = dialog.findViewById<Button>(com.etalon.shashin.R.id.btncnPlus)
         dialog.show()
@@ -155,7 +155,7 @@ class CDetail : Fragment() {
                 showUpdates()
 
             } else {
-                Toast.makeText(requireContext(), "Нужно заполнить все поля", Toast.LENGTH_LONG)
+                Toast.makeText(requireContext(), resources.getString(R.string.nugnozapolnitvsepola), Toast.LENGTH_LONG)
                     .show()
             }
             dialog.dismiss()
@@ -190,7 +190,7 @@ class CDetail : Fragment() {
 
 
             } else {
-                Toast.makeText(requireContext(), "Нужно заполнить все поля", Toast.LENGTH_LONG)
+                Toast.makeText(requireContext(),  resources.getString(R.string.nugnozapolnitvsepola), Toast.LENGTH_LONG)
                     .show()
             }
             dialog.dismiss()
@@ -200,24 +200,22 @@ class CDetail : Fragment() {
         }
     }
 
+    @SuppressLint("SetTextI18n")
     private fun showUpdates(){
         bindingDetail.textViewTittleDetail.text = detailSportpit.itemName
 
-        bindingDetail.textViewPriceOneDetail.text = detailSportpit.priceforone.toString()+" грн"
+        bindingDetail.textViewPriceOneDetail.text = detailSportpit.priceforone.toString()+ resources.getString(R.string.grn)
 
-        bindingDetail.textViewPriceOneDetailzakupka.text = detailSportpit.pricezakupka.toString()+" грн"
+        bindingDetail.textViewPriceOneDetailzakupka.text = detailSportpit.pricezakupka.toString()+resources.getString(R.string.grn)
 
-        bindingDetail.textViewPriceAllDetailzakupka.text =  detailSportpit.amount.times(detailSportpit.pricezakupka).toFloat().toString()+" грн"
+        bindingDetail.textViewPriceAllDetailzakupka.text =  detailSportpit.amount.times(detailSportpit.pricezakupka).toFloat().toString()+resources.getString(R.string.grn)
 
         bindingDetail.textViewAmountDetail.text = detailSportpit.amount.toString()
 
         bindingDetail.textViewsrok.text = detailSportpit.srokgodnosti.toString()
 
-        bindingDetail.textViewPriceAllDetail.text = detailSportpit.amount.times(detailSportpit.priceforone).toFloat().toString()+" грн"
+        bindingDetail.textViewPriceAllDetail.text = detailSportpit.amount.times(detailSportpit.priceforone).toFloat().toString()+resources.getString(R.string.grn)
 
 
     }
-
-
-
 }

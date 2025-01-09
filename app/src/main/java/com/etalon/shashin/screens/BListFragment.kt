@@ -54,6 +54,7 @@ class BListFragment : Fragment() {
             requireActivity(),
             object : OnBackPressedCallback(true) {
                 override fun handleOnBackPressed() {
+                    findNavController().navigate(R.id.action_BListFragment_to_AEnterFragment)
                 }
             })
 
@@ -142,7 +143,7 @@ class BListFragment : Fragment() {
                 dialog.dismiss()
 
             } else {
-                Toast.makeText(requireContext(), "Нужно заполнить все поля", Toast.LENGTH_LONG)
+                Toast.makeText(requireContext(), resources.getString(R.string.nugnozapolnitvsepola), Toast.LENGTH_LONG)
                     .show()
             }
         }
@@ -202,13 +203,8 @@ class BListFragment : Fragment() {
                     adapter?.submitList(it)
                 }.launchIn(viewLifecycleOwner.lifecycleScope)
             }
-
         }
-
     }
-
-
-
 
     private val swipeToDeleteHelper = ItemTouchHelper(object :
         ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT or ItemTouchHelper.RIGHT) {

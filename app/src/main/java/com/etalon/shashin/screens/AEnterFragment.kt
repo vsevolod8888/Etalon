@@ -40,6 +40,7 @@ class AEnterFragment : Fragment() {
             requireActivity(),
             object : OnBackPressedCallback(true){
                 override fun handleOnBackPressed(){
+
                 }
             })
 

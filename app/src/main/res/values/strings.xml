@@ -1,4 +1,41 @@
 <resources>
-    <string name="app_name">Эталон</string>
-    <string name="sportpit">Спортпит</string>
+    <string name="app_name">Etalon</string>
+    <string name="sportpit">Sports nutrition</string>
+    <string name="aminokislotu">Amino acids</string>
+    <string name="vitandminerals">Vitamins and minerals</string>
+    <string name="vodainapitki">Water and drinks</string>
+    <string name="geineru">Gainers</string>
+    <string name="creatinandenergetic">Creatines and energy boosters</string>
+    <string name="proteins">Proteins</string>
+    <string name="proteinsbatonchic">Protein bars</string>
+    <string name="giroshigately">Fat burners</string>
+    <string name="acsessuars">Accessories</string>
+
+    <string name="novayapozitsiya">New item</string>
+    <string name="nazvanie">Name</string>
+    <string name="kolichestvo">Quantity</string>
+    <string name="tsenazayed">Price per unit</string>
+    <string name="tsenazakup">Purchase price</string>
+    <string name="srokgodnosti">Expiration date</string>
+    <string name="ok">OK</string>
+    <string name="otmena">Cancel</string>
+    <string name="otnyat">Subtract -</string>
+    <string name="obnovittsenu">Update price</string>
+    <string name="novayatsena">New price</string>
+    <string name="dobavit">Add +</string>
+
+
+    <string name="tsena">Price</string>
+    <string name="kolvo">Q-ty</string>
+    <string name="summa">Total</string>
+
+    <string name="nugnozapolnitvsepola">All fields must be filled</string>
+    <string name="vnalichii">In stock:</string>
+    <string name="tsenazavse">Total price:</string>
+    <string name="tsenazavsezakupka">Total purchase price:</string>
+    <string name="tsenazaed">Price per unit:</string>
+    <string name="tsenazaedinitsuzakupka">Purchase price per unit:</string>
+    <string name="dobavleno">Added:</string>
+    <string name="grn"> uah</string>
+    <string name="red">Ed.</string>
 </resources>

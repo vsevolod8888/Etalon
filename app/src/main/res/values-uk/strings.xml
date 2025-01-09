@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Еталон</string>
+    <string name="sportpit">Спортивне харчування</string>
+    <string name="aminokislotu">Амінокислоти</string>
+    <string name="vitandminerals">Вітаміни та мінерали</string>
+    <string name="vodainapitki">Вода та напої</string>
+    <string name="geineru">Гейнери</string>
+    <string name="creatinandenergetic">Креатини та енергетики</string>
+    <string name="proteins">Протеїни</string>
+    <string name="proteinsbatonchic">Протеїнові батончики</string>
+    <string name="giroshigately">Жироспалювачі</string>
+    <string name="acsessuars">Аксесуари</string>
+
+    <string name="novayapozitsiya">Нова позиція</string>
+    <string name="nazvanie">Назва</string>
+    <string name="kolichestvo">Кількість</string>
+    <string name="tsenazayed">Ціна за од.</string>
+    <string name="tsenazakup">Закупівельна ціна</string>
+    <string name="srokgodnosti">Термін придатності</string>
+    <string name="ok">ОК</string>
+    <string name="otmena">Скасувати</string>
+    <string name="otnyat">Відняти -</string>
+    <string name="obnovittsenu">Оновити ціну</string>
+    <string name="novayatsena">Нова ціна</string>
+    <string name="dobavit">Додати +</string>
+
+    <string name="tsena">Ціна</string>
+    <string name="kolvo">К-сть</string>
+    <string name="summa">Сума</string>
+
+    <string name="nugnozapolnitvsepola">Потрібно заповнити всі поля</string>
+    <string name="vnalichii">В наявності:</string>
+    <string name="tsenazavse">Ціна за все:</string>
+    <string name="tsenazavsezakupka">Ціна за все закупівля:</string>
+    <string name="tsenazaed">Ціна за од.:</string>
+    <string name="tsenazaedinitsuzakupka">Ціна за од. закупівля:</string>
+    <string name="dobavleno">Додано:</string>
+    <string name="grn"> грн</string>
+    <string name="red">Ред.</string>
+
+
+
+</resources>

@@ -41,7 +41,7 @@
                 android:layout_margin="15dp"
                 android:layout_weight="5"
                 android:gravity="center_vertical"
-                android:text="Название"
+                android:text="@string/nazvanie"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="normal">
@@ -55,7 +55,7 @@
                 android:layout_margin="15dp"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:text="Цена"
+                android:text="@string/tsena"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="normal">
@@ -69,7 +69,7 @@
                 android:layout_margin="15dp"
                 android:layout_weight="2"
                 android:gravity="center"
-                android:text="К-во"
+                android:text="@string/kolvo"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="normal">
@@ -83,7 +83,7 @@
                 android:layout_margin="15dp"
                 android:layout_weight="3"
                 android:gravity="center"
-                android:text="Сумма"
+                android:text="@string/summa"
                 android:textColor="@color/white"
                 android:textSize="14sp"
                 android:textStyle="normal">
