@@ -17,7 +17,7 @@ interface SportPitDao {
     fun getSportPitListByCategoryLiveData(category: String): Flow<List<SportPit>>
 
 
-    @Insert//(onConflict = OnConflictStrategy.)
+    @Insert
     fun insertSportPit(sportPit: SportPit)
 
     @Query("DELETE FROM sportpit WHERE itemName = :name")

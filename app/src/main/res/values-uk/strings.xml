@@ -39,6 +39,11 @@
     <string name="grn"> грн</string>
     <string name="red">Ред.</string>
 
+    <string name="udalitpozitsuy">Видалити позицію</string>
+    <string name="udalit">Видалити</string>
+    <string name="udalion">Видалено</string>
+
+
 
 
 </resources>

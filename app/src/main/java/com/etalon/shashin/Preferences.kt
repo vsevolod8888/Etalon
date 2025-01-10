@@ -4,10 +4,10 @@ import android.content.Context
 import android.content.SharedPreferences
 
 
-class Prefferences (var cont: Context) {
-    var sharedPreferences: SharedPreferences? = null
-    val PREFS = "PREFS"
-    val KEY = "KEY"
+class Prefferences (private var cont: Context) {
+    private var sharedPreferences: SharedPreferences? = null
+    private val PREFS = "PREFS"
+    private val KEY = "KEY"
 
 
      fun insertCategory(category: String){

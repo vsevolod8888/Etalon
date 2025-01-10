@@ -38,4 +38,8 @@
     <string name="dobavleno">Added:</string>
     <string name="grn"> uah</string>
     <string name="red">Ed.</string>
+
+    <string name="udalitpozitsuy">Delete position</string>
+    <string name="udalit">Delete</string>
+    <string name="udalion">Deleted</string>
 </resources>

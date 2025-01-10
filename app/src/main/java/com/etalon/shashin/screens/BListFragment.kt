@@ -114,7 +114,6 @@ class BListFragment : Fragment() {
     private fun dialogNewSportpit(category: String) {
         val dialog = Dialog(requireActivity())
         dialog.setContentView(com.etalon.shashin.R.layout.allertdialog)
-        //  dialog.setTitle("Title")
         var etName: EditText? = dialog.findViewById<EditText>(com.etalon.shashin.R.id.et)
         var etAmount: EditText? =
             dialog.findViewById<EditText>(com.etalon.shashin.R.id.edittextamounSportpit)
@@ -217,16 +216,15 @@ class BListFragment : Fragment() {
         }
 
         override fun onSwiped(viewHolder: RecyclerView.ViewHolder, direction: Int) {
-
             val pos = viewHolder.adapterPosition
             val builder = AlertDialog.Builder(
                 requireContext(),
                 R.style.AlertDialogThemeee
             )
-            builder.setTitle("Удалить позицию ${pos+1}?")
+            builder.setTitle(resources.getString(R.string.udalitpozitsuy)+" ${pos+1}?")
                 .setCancelable(false)
                 .setPositiveButton(
-                    "Удалить"
+                    resources.getString(R.string.udalit)
                 ) { dialog, which ->
                     val category = viewModel.getCategoryVM()
 
@@ -236,7 +234,7 @@ class BListFragment : Fragment() {
                             viewLifecycleOwner.lifecycleScope.launch {
                                 Toast.makeText(
                                     requireContext(),
-                                    name + " удалён",
+                                    name + " "+resources.getString(R.string.udalion),
                                     Toast.LENGTH_LONG
                                 ).show()
                                 if (name != null) {
@@ -251,7 +249,7 @@ class BListFragment : Fragment() {
                             viewLifecycleOwner.lifecycleScope.launch {
                                 Toast.makeText(
                                     requireContext(),
-                                    name + " удалён",
+                                    name + " "+resources.getString(R.string.udalion),
                                     Toast.LENGTH_LONG
                                 ).show()
                                 if (name != null) {
@@ -266,7 +264,7 @@ class BListFragment : Fragment() {
                             viewLifecycleOwner.lifecycleScope.launch {
                                 Toast.makeText(
                                     requireContext(),
-                                    name + " удалён",
+                                    name + " "+resources.getString(R.string.udalion),
                                     Toast.LENGTH_LONG
                                 ).show()
                                 if (name != null) {
@@ -281,7 +279,7 @@ class BListFragment : Fragment() {
                             viewLifecycleOwner.lifecycleScope.launch {
                                 Toast.makeText(
                                     requireContext(),
-                                    name + " удалён",
+                                    name + " "+resources.getString(R.string.udalion),
                                     Toast.LENGTH_LONG
                                 ).show()
                                 if (name != null) {
@@ -296,7 +294,7 @@ class BListFragment : Fragment() {
                             viewLifecycleOwner.lifecycleScope.launch {
                                 Toast.makeText(
                                     requireContext(),
-                                    name + " удалён",
+                                    name + " "+resources.getString(R.string.udalion),
                                     Toast.LENGTH_LONG
                                 ).show()
                                 if (name != null) {
@@ -311,7 +309,7 @@ class BListFragment : Fragment() {
                             viewLifecycleOwner.lifecycleScope.launch {
                                 Toast.makeText(
                                     requireContext(),
-                                    name + " удалён",
+                                    name + " "+resources.getString(R.string.udalion),
                                     Toast.LENGTH_LONG
                                 ).show()
                                 if (name != null) {
@@ -326,7 +324,7 @@ class BListFragment : Fragment() {
                             viewLifecycleOwner.lifecycleScope.launch {
                                 Toast.makeText(
                                     requireContext(),
-                                    name + " удалён",
+                                    name + " "+resources.getString(R.string.udalion),
                                     Toast.LENGTH_LONG
                                 ).show()
                                 if (name != null) {
@@ -341,7 +339,7 @@ class BListFragment : Fragment() {
                             viewLifecycleOwner.lifecycleScope.launch {
                                 Toast.makeText(
                                     requireContext(),
-                                    name + " удалён",
+                                    name + " "+resources.getString(R.string.udalion),
                                     Toast.LENGTH_LONG
                                 ).show()
                                 if (name != null) {
@@ -356,7 +354,7 @@ class BListFragment : Fragment() {
                             viewLifecycleOwner.lifecycleScope.launch {
                                 Toast.makeText(
                                     requireContext(),
-                                    name + " удалён",
+                                    name + " "+resources.getString(R.string.udalion),
                                     Toast.LENGTH_LONG
                                 ).show()
                                 if (name != null) {
@@ -370,7 +368,7 @@ class BListFragment : Fragment() {
                     }
                 }
                 .setNegativeButton(
-                    "Отмена"
+                    " "+resources.getString(R.string.otmena)
                 ) { dialog, which ->
                     bListBinding.recyclerView.getAdapter()!!
                         .notifyItemChanged(viewHolder.adapterPosition)

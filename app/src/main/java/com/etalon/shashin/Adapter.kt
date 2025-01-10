@@ -2,19 +2,17 @@ package com.etalon.shashin
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.content.res.Resources
 import android.view.LayoutInflater
 import android.view.ViewGroup
-
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.etalon.shashin.database.SportPit
 import com.etalon.shashin.databinding.HolderBinding
 
-class Adapter(val clickListener: SportpitListener) :
+class Adapter(private val clickListener: SportpitListener) :
     ListAdapter<SportPit, Holder>(SleepNightDiffCallback()) {
-    var selectedItemPosition: Int = -1
+    private var selectedItemPosition: Int = -1
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): Holder {
         return Holder.from(parent)
@@ -33,7 +31,8 @@ class Adapter(val clickListener: SportpitListener) :
         )
     }
 
-    fun selectItemPosition(itemPos: Int) {
+    @SuppressLint("NotifyDataSetChanged")
+    private fun selectItemPosition(itemPos: Int) {
         selectedItemPosition = itemPos
         notifyDataSetChanged()
     }
@@ -68,7 +67,7 @@ class SleepNightDiffCallback : DiffUtil.ItemCallback<SportPit>() {
         oldItem: SportPit,
         newItem: SportPit
     ): Boolean {
-        return oldItem.ID == newItem.ID
+        return oldItem.id == newItem.id
     }
 
     override fun areContentsTheSame(

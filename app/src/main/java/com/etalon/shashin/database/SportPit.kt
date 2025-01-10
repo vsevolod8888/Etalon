@@ -4,7 +4,6 @@ import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import androidx.versionedparcelable.ParcelField
 import kotlinx.parcelize.Parcelize
 
 @Parcelize
@@ -12,7 +11,7 @@ import kotlinx.parcelize.Parcelize
 data class SportPit(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "ID")
-    var ID: Int = 0,
+    var id: Int = 0,
 
     @ColumnInfo(name = "category")
     var category: String,

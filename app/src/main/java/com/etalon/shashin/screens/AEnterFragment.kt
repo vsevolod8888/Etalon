@@ -18,8 +18,8 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class AEnterFragment : Fragment() {
-    lateinit var bindingEnterfr: AEnterFrBinding
-    val viewModelEnter: ViewModel by viewModels()
+    private lateinit var bindingEnterfr: AEnterFrBinding
+    private val viewModelEnter: ViewModel by viewModels()
 
     @SuppressLint("SourceLockedOrientationActivity")
     override fun onCreateView(
@@ -32,10 +32,6 @@ class AEnterFragment : Fragment() {
             inflater,
             R.layout.a_enter_fr, container, false
         )
-
-
-
-
         activity?.onBackPressedDispatcher?.addCallback(
             requireActivity(),
             object : OnBackPressedCallback(true){
@@ -106,17 +102,9 @@ class AEnterFragment : Fragment() {
                 exitAnimation(bindingEnterfr.linearButtons)
             }
         }
-
-
     }
 
-    suspend fun exitAnimation(view1: View){
-        delay(100)
-        repeat(100) {
-            delay(3)
-            view1.alpha -= 0.01f
-
-        }
+    private suspend fun exitAnimation(view1: View){
         findNavController().navigate(R.id.action_AEnterFragment_to_BListFragment)
     }
 }
